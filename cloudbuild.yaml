@@ -3,7 +3,7 @@ steps:
   args: 
   - 'build' 
   - '-t' 
-  - 'gcr.io/$PROJECT_ID/cj-test-docker' 
+  - 'gcr.io/$PROJECT_ID/linking-test-gcr' 
   - '--label' 
   - 'org.opencontainers.image.revision=$COMMIT_SHA' 
   - '--label' 
