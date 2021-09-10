@@ -1,4 +1,4 @@
-FROM clojure:lein AS builder
+FROM clojure:lein@sha256:8443576895caae2be34924b8d5eb03ba193b196343346ae26984412914771e4e AS builder
 
 RUN mkdir /build
 
@@ -9,7 +9,7 @@ COPY src /build/src
 
 RUN lein metajar
 
-FROM gcr.io/personalsdm-216019/java-atomist:0.13.0-20191119164121
+FROM gcr.io/personalsdm-216019/java-atomist:0.13.0-20191119164121@sha256:60d43b18bb8d86f2906f8a01a51a95dd4a7115ff35a6c921ef1f5b65783d97bd
 
 MAINTAINER Jim Clark <jim@atomist.com>
 
